@@ -2,7 +2,7 @@ import { useState } from "react";
 
 import Feedback from "components/Feedback/Feedback";
 
-import "./styles.css";
+import { PageWrapper } from "./styles";
 
 function Homework_07() {
   const [like, setLike] = useState<number>(0); // Если мы ничего не передаем в качестве аргумента функции useState(), то 1 элемент массива, который эта функция возвращает === undefined
@@ -24,10 +24,7 @@ function Homework_07() {
   };
 
   return (
-    <div
-      // style={{ display: "flex", flexDirection: isRow ? "row" : "column" }}
-      className="homework_07_page_wrapper"
-    >
+    <PageWrapper>
       <Feedback
         like={like}
         dislike={dislike}
@@ -35,7 +32,7 @@ function Homework_07() {
         onLike={onLike}
         resetResults={resetResults}
       />
-    </div>
+    </PageWrapper>
   );
 }
 
